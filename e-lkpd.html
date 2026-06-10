@@ -1,0 +1,570 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-LKPD Hambat Jenis</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+.sidebar{
+width:280px;
+background:#0b3d91;
+color:white;
+padding:20px;
+overflow-y:auto;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:15px;
+margin-bottom:10px;
+background:rgba(255,255,255,0.1);
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.sidebar li:hover{
+background:#1e5cc6;
+}
+
+.content{
+flex:1;
+padding:30px;
+overflow-y:auto;
+}
+
+.page{
+display:none;
+animation:fade 0.5s;
+}
+
+.active{
+display:block;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+h1,h2,h3{
+color:#0b3d91;
+margin-bottom:15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+.cover{
+text-align:center;
+}
+
+.cover img{
+width:300px;
+max-width:100%;
+margin-bottom:20px;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:#0b3d91;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#072d6c;
+}
+
+.rumus{
+background:#eaf1ff;
+padding:20px;
+border-radius:10px;
+font-size:28px;
+font-weight:bold;
+text-align:center;
+margin-top:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+table th, table td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+table th{
+background:#0b3d91;
+color:white;
+}
+
+.peta-konsep{
+width:100%;
+border-radius:10px;
+}
+
+#hasil{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>E-LKPD FISIKA</h2>
+
+<ul>
+
+<li onclick="showPage('cover')">
+<i class="fas fa-home"></i> Cover
+</li>
+
+<li onclick="showPage('identitas')">
+<i class="fas fa-user"></i> Identitas
+</li>
+
+<li onclick="showPage('cp')">
+<i class="fas fa-bullseye"></i> CP & TP
+</li>
+
+<li onclick="showPage('pemantik')">
+<i class="fas fa-lightbulb"></i> Pertanyaan Pemantik
+</li>
+
+<li onclick="showPage('petakonsep')">
+<i class="fas fa-project-diagram"></i> Peta Konsep
+</li>
+
+<li onclick="showPage('materi')">
+<i class="fas fa-book"></i> Materi
+</li>
+
+<li onclick="showPage('evaluasi')">
+<i class="fas fa-pen"></i> Evaluasi
+</li>
+
+<li onclick="showPage('refleksi')">
+<i class="fas fa-comments"></i> Refleksi
+</li>
+
+</ul>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="content">
+
+<!-- COVER -->
+
+<section id="cover" class="page active">
+
+<div class="card cover">
+
+<img src="https://megaconbeton.com/wp-content/uploads/2019/02/tiang-listrik-9.jpg">
+
+<h1>E-LKPD FISIKA</h1>
+
+<h2>Materi Hambat Jenis (Resistivitas)</h2>
+
+<p>Kurikulum Merdeka</p>
+
+<br>
+
+<p>
+Disusun untuk membantu peserta didik memahami konsep hambat jenis,
+faktor yang mempengaruhinya, serta penerapannya dalam kehidupan sehari-hari.
+</p>
+
+</div>
+
+</section>
+
+<!-- IDENTITAS -->
+
+<section id="identitas" class="page">
+
+<div class="card">
+
+<h2>Identitas Peserta Didik</h2>
+
+<label>Nama</label>
+<input type="text">
+
+<label>Kelas</label>
+<input type="text">
+
+<label>Nomor Absen</label>
+<input type="text">
+
+<h2>Identitas Penyusun</h2>
+
+<p>Nama : Tazkia Muthmanainatul Qolbi Sobari</p>
+<p>NIM : 1252070047</p>
+<p>Email : tazkiamq8@gmail.com</p>
+<a href="poto gue.jpeg"_blank>
+    <img class="peta-k"
+    src="poto gue.jpeg"
+    alt="Poto Tazkia">
+</a>
+
+</div>
+
+</section>
+
+<!-- CP TP -->
+
+<section id="cp" class="page">
+
+<div class="card">
+
+<h2>Capaian Pembelajaran (CP)</h2>
+
+<p>
+Mampu memahami konsep hambatan jenis kawat sehingga dapat memformulasikan serta 
+mengetahui faktor-faktor yang mempengaruhi hambatan jenis kawat dan dapat 
+mengaplikasikannya pada kehidupan sehari-hari. 
+</p>
+
+<h2>Tujuan Pembelajaran (TP)</h2>
+
+<ol>
+
+<li>Peserta didik dapat memformulasikan hambatan jenis kawat.  </li>
+<li>Peserta didik dapat mengaplikasikan hambatan jenis pada produk teknologi. </li>
+</ol>
+
+<h2>Petunjuk Penggunaan</h2>
+<ol>
+<li>Baca capaian dan tujuan pembelajaran.</li>
+<li>Pelajari materi dengan teliti.</li>
+<li>Tonton video pembelajaran.</li>
+<li>Kerjakan latihan soal.</li>
+<li>Kerjakan refleksi.</li>
+</ol>
+</div>
+
+</section>
+
+<!-- PEMANTIK -->
+
+<section id="pemantik" class="page">
+
+<div class="card">
+
+<h2>Pertanyaan Pemantik</h2>
+
+<ol>
+
+<li>Mengapa kabel listrik dibuat dari tembaga?</li>
+<textarea rows="5"></textarea>
+<li>Mengapa karet digunakan sebagai pelapis kabel?</li>
+<textarea rows="5"></textarea>
+<li>Apakah semua bahan menghantarkan listrik dengan baik?</li>
+<textarea rows="5"></textarea>
+<li>Mengapa kawat yang lebih panjang memiliki hambatan lebih besar?</li>
+<textarea rows="5"></textarea>
+<li>Mengapa elemen pemanas setrika tidak dibuat dari tembaga?</li>
+<textarea rows="5"></textarea>
+<button>Simpan Jawaban</button>
+</ol>
+
+</div>
+
+</section>
+
+<!-- PETA KONSEP -->
+<section id="petakonsep" class="page">
+
+<div class="card">
+
+<h2>Peta Konsep Hambat Jenis</h2>
+
+<a href="peta konsep.png target="_blank>
+    <img class="peta-konsep"
+    src="peta konsep.png"
+    alt="Mind Map Hambat Jenis">
+</a>
+
+</div>
+</section>
+
+<section id="materi" class="page">
+
+<div class="card">
+
+<h2>Materi Hambat Jenis</h2>
+
+<h3>Pengertian</h3>
+
+<p>
+Hambat jenis (ρ) adalah sifat intrinsik suatu bahan yang menunjukkan kemampuan bahan dalam menghambat aliran arus listrik.
+
+Nilai hambat jenis berbeda untuk setiap bahan.
+Semakin besar hambat jenis, semakin sulit arus listrik mengalir.
+Semakin kecil hambat jenis, semakin mudah arus listrik mengalir.
+</p>
+
+<div class="rumus">
+R = ρL / A
+</div>
+
+<br>
+
+<h3>Faktor yang Mempengaruhi</h3>
+
+<ul>
+
+<li>Jenis bahan</li>
+<li>Panjang penghantar (L)</li>
+<li>Luas penampang (A)</li>
+<li>Suhu</li>
+
+</ul>
+<p>Satuan internasional (SI) untuk hambat jenis adalah:Ω⋅m</p>
+
+<br>
+
+<h3>Jenis Bahan</h3>
+
+<table>
+
+<tr>
+<th>Bahan</th>
+<th>Kategori</th>
+</tr>
+
+<tr>
+<td>Tembaga</td>
+<td>Konduktor</td>
+</tr>
+
+<tr>
+<td>Silikon</td>
+<td>Semikonduktor</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Karet</td>
+<td>Isolator</td>
+</tr>
+
+</table>
+
+<h3> Penerapan Hambat Jenis</h3>
+<li>Kabel Listrik</li>
+
+<p>Menggunakan bahan konduktor seperti tembaga karena hambat jenisnya kecil sehingga energi yang hilang sedikit.</p>
+<li>Elemen Pemanas</li>
+
+<p>Menggunakan bahan seperti nichrome yang memiliki hambat jenis besar sehingga menghasilkan panas saat dialiri arus.</p>
+
+<li>Komponen Elektronik</li>
+
+<p>Nilai hambat jenis digunakan dalam pembuatan resistor dan komponen elektronik lainnya.</p>
+
+<h3>Kumpulan Video Pembelajaran</h3>
+<p>Tonton video di bawah ini:</p>
+<div style="text-align: center; margin: 20px 0;">
+    <a href="https://youtu.be/K1uWAj68vo4?si=p-rvnqQpfEoM9WLn" 
+       target="_blank" 
+       style="background: linear-gradient(#0d47a1, #0d47a1); 
+              color: white; 
+              padding: 15px 30px; 
+              text-decoration: none; 
+              border-radius: 30px; 
+              display: inline-block; 
+              margin: 10px;
+              font-family: Arial; 
+              font-weight: bold;
+              box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        ▶ Video 1: Pengantar Hambat Jenis
+    </a>
+    <a href="https://youtu.be/sRdZEPgh_-U?si=J66kkfpLBF50o7Ww" 
+       target="_blank" 
+       style="background: linear-gradient(#0d47a1, #0d47a1); 
+              color: white; 
+              padding: 15px 30px; 
+              text-decoration: none; 
+              border-radius: 30px; 
+              display: inline-block; 
+              margin: 10px;
+              font-family: Arial; 
+              font-weight: bold;
+              box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        ▶ Video 2: Praktikum Hambat Jenis kawat
+    </a>
+</style>
+</div>
+
+</section>
+
+<!-- EVALUASI -->
+
+<section id="evaluasi" class="page">
+
+<div class="card">
+
+<h2>Evaluasi</h2>
+
+<p>1. Satuan hambat jenis adalah ....</p>
+
+<input type="radio" name="q1" value="0"> Ohm<br>
+<input type="radio" name="q1" value="1"> Ohm meter<br>
+<input type="radio" name="q1" value="0"> Ampere<br>
+
+<br>
+
+<p>2. Jika panjang kawat bertambah maka hambatan ....</p>
+
+<input type="radio" name="q2" value="1"> Bertambah<br>
+<input type="radio" name="q2" value="0"> Berkurang<br>
+
+<br>
+
+<p>3. Bahan yang memiliki hambat jenis paling kecil adalah ....</p>
+
+<input type="radio" name="q3" value="1"> Tembaga<br>
+<input type="radio" name="q3" value="0"> Karet<br>
+<input type="radio" name="q3" value="0"> Plastik<br>
+
+<br>
+
+<button onclick="cekNilai()">
+Periksa Jawaban
+</button>
+
+<div id="hasil"></div>
+
+</div>
+
+</section>
+
+<!-- REFLEKSI -->
+
+<section id="refleksi" class="page">
+
+<div class="card">
+
+<h2>Refleksi Pembelajaran</h2>
+
+<label>
+Apa yang sudah kamu pahami hari ini?
+</label>
+
+<textarea rows="5"></textarea>
+
+<label>
+Apa yang masih sulit dipahami?
+</label>
+
+<textarea rows="5"></textarea>
+<button>Simpan Jawaban</button>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+<script>
+
+function showPage(id){
+
+let pages=document.querySelectorAll('.page');
+
+pages.forEach(page=>{
+page.classList.remove('active');
+});
+
+document.getElementById(id).classList.add('active');
+
+}
+
+function cekNilai(){
+
+let nilai=0;
+
+let q1=document.querySelector('input[name="q1"]:checked');
+let q2=document.querySelector('input[name="q2"]:checked');
+let q3=document.querySelector('input[name="q3"]:checked');
+
+if(q1) nilai += Number(q1.value);
+if(q2) nilai += Number(q2.value);
+if(q3) nilai += Number(q3.value);
+
+let skor=(nilai/3)*100;
+
+document.getElementById("hasil").innerHTML=
+"Nilai Anda = "+skor.toFixed(0);
+
+}
+
+</script>
+
+</body>
+</html>
